@@ -35,7 +35,7 @@ while True:
     output = ((0.6 * frame) + (0.4 * mask)).astype("uint8")
     cv2.imshow("frame",output)
 
-    #relase when esc key is pressed
+    #release when esc key is pressed
     if cv2.waitKey(1)&0xFF==27:
         break
 
