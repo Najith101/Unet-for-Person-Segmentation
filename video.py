@@ -7,7 +7,7 @@ model=load_model("model.h5",compile=False)
 cap=cv2.VideoCapture(0)
 
 
-index=0
+#index=0
 while True:
     ret,frame=cap.read()
     h,w=frame.shape[:2]
@@ -36,8 +36,8 @@ while True:
     output = ((0.6 * frame) + (0.4 * mask)).astype("uint8")
     cv2.imshow("frame",output)
 
-    cv2.imwrite("videofeed"+str(index)+".png",output)
-    index+=1
+    #cv2.imwrite("videofeed"+str(index)+".png",output)
+    #index+=1
 
     #relase when esc key is pressed
     if cv2.waitKey(1)&0xFF==27:
